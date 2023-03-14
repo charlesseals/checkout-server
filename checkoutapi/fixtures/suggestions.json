@@ -1,0 +1,26 @@
+[
+    {
+        "model": "checkoutapi.suggestion",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "openai_suggestion": 2
+        }
+    },
+    {
+        "model": "checkoutapi.suggestion",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "openai_suggestion": 1
+        }
+    },
+    {
+        "model": "checkoutapi.suggestion",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "openai_suggestion": 3
+        }
+    }
+]

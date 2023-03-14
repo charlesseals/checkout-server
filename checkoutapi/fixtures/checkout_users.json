@@ -1,0 +1,12 @@
+[
+    {
+        "model": "checkoutapi.checkoutuser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "World's Best Boss",
+            "profile_image_url": "https://people.com/thmb/BJqN8mOl0sT69KD6JlgmVO6MjqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/the-office-steve-864d7814dbcc4807944c7ea609c4972a.jpg"
+        }
+    }
+
+]

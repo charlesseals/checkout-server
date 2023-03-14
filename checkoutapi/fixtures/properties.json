@@ -1,0 +1,36 @@
+[
+    {
+        "model": "checkoutapi.property",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "name": "Pacific House",
+            "address": "128 Pacific Blvd",
+            "size": 1700,
+            "image_url": "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fapi-prod.corelogic.com%2Ftrestle%2FMedia%2FCRMLS%2FProperty%2FPHOTO-jpeg%2F1002461503%2F0%2FMTU3Mi8yMjU2LzE5%2FMTkvODYyMy8xNjY2NDAyNTg2%2Fcfq4jPjvYm5hygTG3Isb84jKbA-ENslhV89XL8Ipbu0%3Fdate%3D2023-02-15&option=N&h=472&permitphotoenlargement=false"
+        }
+    },
+    {
+        "model": "checkoutapi.property",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "name": "Olympic House",
+            "address": "1300 Olympic Blvd",
+            "size": 2100,
+            "image_url": "https://www.bontena.com/images/articles/realestate/Luxury-Homes-for-Sale-in-Malibu-California-1200.jpg"
+        }
+    },
+    {
+        "model": "checkoutapi.property",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "name": "Caster House",
+            "address": "1300 Caster Way",
+            "size": 1300,
+            "image_url": "https://images1.apartments.com/i2/vi2egnjCOcfDox9LTVp_D3k0MBG4G5kXjBtjLolraL8/111/650-n-topanga-canyon-blvd-topanga-ca-primary-photo.jpg"
+        }
+
+    }
+]

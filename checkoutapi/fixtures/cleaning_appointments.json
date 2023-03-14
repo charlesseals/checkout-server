@@ -1,0 +1,32 @@
+[
+    {
+        "model": "checkoutapi.cleaningappointment",
+        "pk": 1,
+        "fields": {
+            "cleaner": 3,
+            "property": 2,
+            "date_time": "2023-06-01T09:30:00Z",
+            "progress": true
+        }
+    },
+    {
+        "model": "checkoutapi.cleaningappointment",
+        "pk": 2,
+        "fields": {
+            "cleaner": 2,
+            "property": 1,
+            "date_time": "2023-12-25T10:00:00Z",
+            "progress": true
+        }
+    },
+    {
+        "model": "checkoutapi.cleaningappointment",
+        "pk": 3,
+        "fields": {
+            "cleaner": 1,
+            "property": 3,
+            "date_time": "2023-07-04T12:00:00Z",
+            "progress": false
+        }
+    }
+]

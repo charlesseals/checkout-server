@@ -1,0 +1,27 @@
+[
+    {
+        "model": "checkoutapi.cleaner",
+        "pk": 1,
+        "fields": {
+            "name": "Frank",
+            "phone_number": "852-837-9713"
+        }
+    },
+    {
+        "model": "checkoutapi.cleaner",
+        "pk": 2,
+        "fields": {
+            "name": "Susan",
+            "phone_number": "202-244-7090"
+        }
+    },
+    {
+        "model": "checkoutapi.cleaner",
+        "pk": 3,
+        "fields": {
+            "name": "Alex",
+            "phone_number": "507-720-1157"
+        }
+    }
+
+]

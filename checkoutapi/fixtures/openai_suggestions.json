@@ -1,0 +1,23 @@
+[
+    {
+        "model": "checkoutapi.openaisuggestion",
+        "pk": 1,
+        "fields": {
+            "content": "Set competitive pricing: Make sure your pricing is competitive with other Airbnb listings in your area. Use the Airbnb pricing tool to help you set the right price for your listing."
+        }
+    },
+    {
+        "model": "checkoutapi.openaisuggestion",
+        "pk": 2,
+        "fields": {
+            "content": "Make sure to take clear, well-lit photos that showcase your property's best features."
+        }
+    },
+    {
+        "model": "checkoutapi.openaisuggestion",
+        "pk": 3,
+        "fields": {
+            "content": "Offer additional amenities: Consider offering additional amenities that can help your listing stand out, such as free Wi-Fi, a pool, or a hot tub."
+        }
+    }
+]
