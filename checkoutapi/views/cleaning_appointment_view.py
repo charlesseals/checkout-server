@@ -12,11 +12,11 @@ class CleaningAppointmentView(ViewSet):
     #     return Response(serializer.data, status=status.HTTP_200_OK)
 
     def list(self, request):
-        user_id = request.query_params.get('user_id')
 
-        if user_id:
-            cleaningAppointments = CleaningAppointment.objects.filter(user=user_id)
-
+        if "user" in request.query_params:
+            checkoutUser = CheckoutUser.objects.get(user=request.query_params['user'])
+            property = Property.objects.get(user_id=checkoutUser.id)
+            cleaningAppointments = CleaningAppointment.objects.filter(property_id=property.id)
         else:
             cleaningAppointments = CleaningAppointment.objects.all()
         serializer = CleaningAppointmentSerializer(cleaningAppointments, many=True)
