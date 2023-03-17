@@ -19,11 +19,11 @@ class PropertyView(ViewSet):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def list(self, request):
-        """Handle GET requests to get all categories
-        Returns:
-            Response -- JSON serialized list of categories
-        """
-        properties = Property.objects.all()
+        if "user" in request.query_params:
+            checkoutUser = CheckoutUser.objects.get(user=request.query_params['user'])
+            properties = Property.objects.filter(user_id=checkoutUser.id)
+        else:
+            properties = Property.objects.all()
         serializer = PropertySerializer(properties, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
