@@ -11,15 +11,26 @@ class CleaningAppointmentView(ViewSet):
     #     serializer = CleaningAppointmentSerializer(cleaningAppointment)
     #     return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def list(self, request):
+    # def list(self, request):
+    #     if "user" in request.query_params:
+    #         checkoutUser = CheckoutUser.objects.get(user=request.query_params['user'])
+    #         property = Property.objects.get(user_id=checkoutUser.id)
+    #         cleaningAppointments = CleaningAppointment.objects.filter(property_id=property.id)
+    #     else:
+    #         cleaningAppointments = CleaningAppointment.objects.all()
+    #     serializer = CleaningAppointmentSerializer(cleaningAppointments, many=True)
+    #     return Response(serializer.data, status=status.HTTP_200_OK)
 
-        if "user" in request.query_params:
-            checkoutUser = CheckoutUser.objects.get(user=request.query_params['user'])
-            property = Property.objects.get(user_id=checkoutUser.id)
-            cleaningAppointments = CleaningAppointment.objects.filter(property_id=property.id)
+
+    def list(self, request):
+        user_id = request.query_params.get('user')
+        co_user_id = CheckoutUser.objects.get(user_id = user_id)
+        if co_user_id is not None:
+            appointments = CleaningAppointment.objects.filter(property__user_id=co_user_id)
         else:
-            cleaningAppointments = CleaningAppointment.objects.all()
-        serializer = CleaningAppointmentSerializer(cleaningAppointments, many=True)
+            appointments = CleaningAppointment.objects.all()
+
+        serializer = CleaningAppointmentSerializer(appointments, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     def create(self, request):
@@ -39,8 +50,8 @@ class CleaningAppointmentView(ViewSet):
         serializer = CleaningAppointmentSerializer(cleaningAppointments)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    
-        
+
+
 
 class CleanerSerializer(serializers.ModelSerializer):
     class Meta:
