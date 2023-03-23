@@ -18,12 +18,13 @@ from django.conf.urls import include
 from django.urls import path
 from rest_framework import routers
 from checkoutapi.views import register_user, login_user
-from checkoutapi.views import PropertyView, CleaningAppointmentView, CleanerView
+from checkoutapi.views import PropertyView, CleaningAppointmentView, CleanerView, SuggesterView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'properties', PropertyView, 'property')
 router.register(r'cleanings', CleaningAppointmentView, 'cleaning')
 router.register(r'cleaners', CleanerView, 'cleaner')
+router.register(r'suggestions', SuggesterView, 'suggestion')
 
 
 urlpatterns = [
@@ -32,3 +33,5 @@ urlpatterns = [
     path('login', login_user),
     path('admin/', admin.site.urls),
 ]
+
+    # path('suggestions', SuggesterView.as_view({'create': 'chatbot'}))
