@@ -19,7 +19,7 @@ class SuggesterView(ViewSet):
 
         if api_key is not None and request.method =='POST':
             user_input = request.data.get('user_input')
-            prompt = f"if the question is related to improving the performance of an airbnb or rental property - answer it: {user_input}, else say: CAN'T ANSWER THIS"
+            prompt = f"if the question is related to improving the performance of an airbnb or rental property - respond to this: {user_input}, else say: CAN'T ANSWER THIS"
 
             response = openai.Completion.create(
                 engine = 'text-davinci-003',
